@@ -1,0 +1,26 @@
+🧠 Question:
+Explain the ReAct prompting technique.
+
+🎯 Strategy: react
+
+💬 Final Answer:
+The ReAct prompting technique is a method that combines reasoning and acting within a single loop to solve multi-step questions or retrieval tasks. This approach aims to make the AI model's process more explainable and factual.
+
+The ReAct loop consists of the following steps:
+1.  **THINK:** The model analyzes the problem and plans its next action.
+2.  **ACT:** The model performs an action, such as searching for information or making a calculation.
+3.  **OBSERVE:** The model receives the result of its action.
+4.  **REFLECT:** The model evaluates the observation and decides on the next step, potentially revising its plan.
+5.  **FINAL ANSWER:** Once the problem is solved, the model provides the final answer.
+
+By interleaving thinking and acting, ReAct helps the model break down complex problems into manageable steps, retrieve relevant information, and use that information to arrive at a well-reasoned and factual answer.
+
+📊 Evaluation:
+{
+    "bleu": 0.0087,
+    "rouge1_f": 0.1358,
+    "rougeL_f": 0.0988,
+    "mse_length": 16641.0,
+    "mae_length": 129.0,
+    "rmse_length": 129.0
+}

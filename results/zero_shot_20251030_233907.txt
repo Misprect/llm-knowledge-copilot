@@ -1,0 +1,17 @@
+🧠 Question:
+What is zero-shot prompting?
+
+🎯 Strategy: zero_shot
+
+💬 Final Answer:
+The provided context does not define zero-shot prompting.
+
+📊 Evaluation:
+{
+    "bleu": 0.0,
+    "rouge1_f": 0.25,
+    "rougeL_f": 0.1875,
+    "mse_length": 196.0,
+    "mae_length": 14.0,
+    "rmse_length": 14.0
+}

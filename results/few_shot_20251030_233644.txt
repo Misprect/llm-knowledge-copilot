@@ -1,0 +1,17 @@
+🧠 Question:
+What is few-shot prompting and how does it help AI models?
+
+🎯 Strategy: few_shot
+
+💬 Final Answer:
+Few-shot prompting provides a few examples to guide an AI model's response, improving accuracy with limited data.
+
+📊 Evaluation:
+{
+    "bleu": 0.0459,
+    "rouge1_f": 0.4681,
+    "rougeL_f": 0.3404,
+    "mse_length": 81.0,
+    "mae_length": 9.0,
+    "rmse_length": 9.0
+}

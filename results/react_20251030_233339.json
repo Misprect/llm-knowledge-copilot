@@ -1,0 +1,54 @@
+{
+    "answer": "The ReAct prompting technique is a method that combines reasoning and acting within a single loop to solve multi-step questions or retrieval tasks. This approach aims to make the AI model's process more explainable and factual.\n\nThe ReAct loop consists of the following steps:\n1.  **THINK:** The model analyzes the problem and plans its next action.\n2.  **ACT:** The model performs an action, such as searching for information or making a calculation.\n3.  **OBSERVE:** The model receives the result of its action.\n4.  **REFLECT:** The model evaluates the observation and decides on the next step, potentially revising its plan.\n5.  **FINAL ANSWER:** Once the problem is solved, the model provides the final answer.\n\nBy interleaving thinking and acting, ReAct helps the model break down complex problems into manageable steps, retrieve relevant information, and use that information to arrive at a well-reasoned and factual answer.",
+    "strategy": "react",
+    "retrieved": [
+        {
+            "id": "chunk_032",
+            "topic": "ReAct Prompting Technique Explanation",
+            "educational": "The ReAct (Reason + Act) prompting technique combines reasoning and actions. The model alternates between thinking and performing steps to reach better answers. Step 1: The model reasons about the question. Step 2: It performs an action, like retrieving or inferring. Step 3: It observes the result. Step 4: It reflects and improves the reasoning until it finds a confident final answer.",
+            "enterprise": "ReAct prompting combines reasoning and acting in a single loop: THINK → ACT → OBSERVE → REFLECT → FINAL ANSWER. This method helps the model stay explainable and factual while solving multi-step questions or retrieval tasks.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_032"
+                ],
+                [
+                    "topic",
+                    "ReAct Prompting Technique Explanation"
+                ],
+                [
+                    "source",
+                    "Prompting_Techniques_Doc"
+                ]
+            ]
+        },
+        {
+            "id": "chunk_031",
+            "topic": "•Practiced prompt techniques such as persona,chain of thought,",
+            "educational": "•Practiced prompt techniques such as persona,chain of thought, ReAct, few shot 27 October 2025 14:23 New Section 1 Page 80",
+            "enterprise": "•Practiced prompt techniques such as persona,chain of thought, ReAct, few shot 27 October 2025 14:23 New Section 1 Page 80",
+            "meta": [
+                [
+                    "id",
+                    "chunk_031"
+                ],
+                [
+                    "topic",
+                    "•Practiced prompt techniques such as persona,chain of thought,"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        }
+    ],
+    "evaluation": {
+        "bleu": 0.0087,
+        "rouge1_f": 0.1358,
+        "rougeL_f": 0.0988,
+        "mse_length": 16641.0,
+        "mae_length": 129.0,
+        "rmse_length": 129.0
+    }
+}

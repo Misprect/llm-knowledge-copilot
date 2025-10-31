@@ -1,0 +1,22 @@
+🧠 Question:
+What is embedding in NLP?
+
+🎯 Strategy: cod
+
+💬 Final Answer:
+1.  LLMs convert text to numerical vectors (embeddings).
+2.  Embeddings capture contextual meaning and similarity.
+3.  Cross-encoders compare two texts for similarity.
+4.  TensorFlow aids in building, training, and deploying models.
+
+**Summary:** LLMs use embeddings and cross-encoders, supported by TensorFlow, for semantic search.
+
+📊 Evaluation:
+{
+    "bleu": 0.0064,
+    "rouge1_f": 0.25,
+    "rougeL_f": 0.1111,
+    "mse_length": 256.0,
+    "mae_length": 16.0,
+    "rmse_length": 16.0
+}
