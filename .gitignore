@@ -17,7 +17,9 @@ backend/data/*
 !backend/data/sample_genai_knowledge_base.json
 
 # results — keep only samples
-results/
+results/*
+!results/*.json
+!results/*.txt
 !results_sample/
 
 # ---- Node/React frontend ----
