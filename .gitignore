@@ -9,6 +9,7 @@ venv/
 backend/.env
 backend/__pycache__/
 backend/*.log
+backend/results_ss_runtime_logs/
 
 # FAISS or data artifacts
 index.faiss
@@ -39,3 +40,4 @@ yarn.lock
 .idea/
 .DS_Store
 Thumbs.db
+
