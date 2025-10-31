@@ -105,5 +105,5 @@ This project uses a **custom corpus (from personal notes)** and integrates **BLE
 ---
 
 ## License
-This project is licensed under the **MIT License** — feel free to use and modify it.
 
+This project is licensed under the **MIT License** — feel free to use and modify it.
