@@ -1,9 +1,0 @@
-🧠 Question:
-How can zero-shot reasoning in large language models enable accurate decision-making in domains like healthcare or finance without prior task-specific examples?
-
-🎯 Strategy: zero_shot
-
-💬 Final Answer:
-The provided context does not contain information about zero-shot reasoning or its application in healthcare or finance.
-
-📊 Evaluation: None (No reference answer provided)

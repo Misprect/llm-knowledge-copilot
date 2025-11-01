@@ -1,9 +1,0 @@
-🧠 Question:
-How can large language models be adapted to perform domain-specific legal document summarization, and what challenges arise when fine-tuning them on confidential datasets?
-
-🎯 Strategy: few_shot
-
-💬 Final Answer:
-LLMs can be adapted via fine-tuning on legal corpora for domain-specific summarization, but challenges include data privacy, legal nuance, and bias.
-
-📊 Evaluation: None (No reference answer provided)

@@ -1,0 +1,94 @@
+{
+    "answer": "Here's how an AI agent, using the ReAct strategy, would plan a trip from Delhi to Paris within a ₹1 lakh budget:\n\n**ReAct Strategy Breakdown:**\n\nThe ReAct strategy combines **Reasoning** (internal thought process) and **Acting** (interacting with external tools or information sources) to achieve a goal. For trip planning, this translates to:\n\n1.  **Reasoning:** The AI will analyze the request, break it down into sub-goals, and formulate hypotheses about how to achieve them within the constraints.\n2.  **Acting:** The AI will then use tools (like flight search engines, hotel booking sites, currency converters, travel blogs, etc.) to gather information and validate its hypotheses.\n3.  **Iterative Process:** The AI will repeat this cycle of reasoning and acting, refining its plan based on the information it gathers, until a satisfactory solution is found.\n\n---\n\n**AI Agent's ReAct Trip Planning Process (Delhi to Paris, ₹1 Lakh Budget):**\n\n**Initial Reasoning (Goal: Plan Delhi to Paris trip within ₹1 Lakh):**\n\n*   **Objective:** Find the most cost-effective way to travel from Delhi to Paris for a reasonable duration, staying within a ₹1,00,000 budget.\n*   **Key Constraints:**\n    *   Origin: Delhi (DEL)\n    *   Destination: Paris (CDG/ORY)\n    *   Budget: ₹1,00,000 (approx. €1100-€1200, depending on exchange rate)\n    *   Implicit: Reasonable travel duration, basic accommodation, and some allowance for activities/food.\n*   **Major Cost Components:**\n    *   Flights (likely the largest expense)\n    *   Accommodation\n    *   Visa fees (if applicable, though often not included in trip budget)\n    *   Local transportation\n    *   Food\n    *   Activities/Sightseeing\n    *   Travel Insurance\n    *   Miscellaneous expenses\n*   **Hypotheses for Cost Optimization:**\n    *   **Flights:**\n        *   Travel during the shoulder season or off-season.\n        *   Be flexible with travel dates.\n        *   Consider budget airlines or flights with layovers.\n        *   Book in advance.\n    *   **Accommodation:**\n        *   Hostels or budget hotels.\n        *   Consider",
+    "strategy": "tot",
+    "retrieved": [
+        {
+            "id": "chunk_018",
+            "topic": "This pattern is essential for AI agents, involving",
+            "educational": "This pattern is essential for AI agents, involving thinking about the task, p erforming an action, observing the result, and responding accordingly. • Tools for AI Agents: Examples include Python environments, APIs, and image generation models. The video demonstrates how to d efine and use these tools within an AI agent. • Code for expanding into AI agents using rag model New Section 1 Page 20 New Section 1 Page 21 New Section 1 Page 22 New Section 1 Page 23 New Section 1 Page 24 New Section 1 Page 25 Section 5 MODULE 2-Optimizing LLM's with Fine -Tuning Definition: Transfer learning involves taking a model trained for one task and reusing it as the starting point for a model o n a second task. This helps reduce the amount of data needed for the second task. The process includes selecting a source model from a repository like Hugging Face, and then fine -tuning it with labelled data specific to the new task. This technique is commonly used for tasks like sequence classification, where a pre -trained model like BERT is adapted with additional layers to perform specific tasks such as text classification. • The OpenAI fine tuning API WHY Fine tune? Using custom data ensures the model is trained on relevant information, making outputs more applicable and accur ate. ○ Understanding Jargon: Fine -tuning helps the model understand industry -specific jargon and nuances that might be missed otherwise. Fine -tuning can save time and computational resources at scale, making it a cost -effective solution for large -scale applications. ○ DAY 5 Case study predicting with amazon services part 1 & 2 Types of Auto Regressive Models Chat -Based Models: GPT -3.5, GPT -4 ○ Function: These models are designed for interactive conversations. They handle multiple turns of dialogue, maintaining contex t throughout the conversation. ○ Real -World Example: Customer support chatbots. When you interact with a chatbot on a website, it remembers the context of your pre vious messages to provide coherent and relevant responses. ○• Completion -Based Models: GPT -3 (specifically the Babbage model) ○ Function: These models are used for generating text completions based on a given prompt. They are typically used for single -turn tasks. ○ Real -World Example: Text generation tools. When you use a tool to generate a paragraph or complete a sentence based on a prompt, i t uses a completion -based model to predict the next part of the text. These are added to the input (prompt) to provide context or instructions to the model. • For example, in a chat -based model, you might see prefixes like \"system\", \"user\", and \"assistant\" to denote who is speaking.",
+            "enterprise": "This pattern is essential for AI agents, involving thinking about the task, p erforming an action, observing the result, and responding accordingly. • Tools for AI Agents: Examples include Python environments, APIs, and image generation models. The video demonstrates how to d efine and use these tools within an AI agent. • Code for expanding into AI agents using rag model New Section 1 Page 20 New Section 1 Page 21 New Section 1 Page 22 New Section 1 Page 23 New Section 1 Page 24 New Section 1 Page 25 Section 5 MODULE 2-Optimizing LLM's with Fine -Tuning Definition: Transfer learning involves taking a model trained for one task and reusing it as the starting point for a model o n a second task. This helps reduce the amount of data needed for the second task.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_018"
+                ],
+                [
+                    "topic",
+                    "This pattern is essential for AI agents, involving"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        },
+        {
+            "id": "chunk_028",
+            "topic": "• Code for evaluating And Cleaning Data New",
+            "educational": "• Code for evaluating And Cleaning Data New Section 1 Page 70 New Section 1 Page 71 New Section 1 Page 72 New Section 1 Page 73 New Section 1 Page 74 Section 7 -Case Studies Evaluating AI Agents: Task Automation and Test Integration AI Agent definition• ReAct Framework in simple terms: The ReAct framework involves reasoning through a problem, selecting an appropriate tool, executing the tool, and then iterati ng this process until a solution is found. • ReAct in a bit complex language with a visual representation Test datasets that were self -created in image above New Section 1 Page 75 Positional Bias in simple terms: The issue with positional bias, is that when the order of tools in a list can affect the ag ent's tool selection accuracy. • Measuring retrieval -augmented generation (RAG) systems RAG (Retrieval -Augmented Generation): Combines retrieving relevant information from a database and generating responses based on that inform ation. The component that pulls information from a database.○ Generator: The component that uses the retrieved information to generate a conversational response. These are components of a RAG. ○• Embedding/Classification Task: A task that involves determining the similarity between documents using embeddings.• Precision: Measures the relevance of retrieved documents out of the total retrieved.• Recall@k: Measures if at least one relevant document is retrieved within the top k documents.○ It also measures that in batches of relevant documents of k how many are truely relevant and based on it predicts the output as( yes or no), (positive or negative) ○• Cosine Similarity: A metric used to measure how similar two documents are.• Re-ranking: Using a secondary AI system to reorder retrieved documents to improve relevance.• Cross -Encoder: A model used for re -ranking documents to improve retrieval accuracy. Measures if the top retrieved document is relevant, effectively an accuracy metric.• Building and recommending a recommendation system using LLM Using collaborative filtering to get the filtered data that has been undergone RHLF and because of feedback the data is more accurate Then we use nps scores to generate the liking and disliking of animes based on human feedback• Jaccard Score It is a metric used to measure the similarity between two sets. • It is calculated by dividing the number of common elements between the sets by the total number of unique elements in both se ts. • Promoted Jaccard Score It is a specific application of the Jaccard Score in the context of recommendation systems. • It measures the similarity between sets of users who have promoted (rated highly) two different items. • This score helps in fine -tuning the recommendation engine by focusing on the preferences of users who have given high ratings.",
+            "enterprise": "• Code for evaluating And Cleaning Data New Section 1 Page 70 New Section 1 Page 71 New Section 1 Page 72 New Section 1 Page 73 New Section 1 Page 74 Section 7 -Case Studies Evaluating AI Agents: Task Automation and Test Integration AI Agent definition• ReAct Framework in simple terms: The ReAct framework involves reasoning through a problem, selecting an appropriate tool, executing the tool, and then iterati ng this process until a solution is found. • ReAct in a bit complex language with a visual representation Test datasets that were self -created in image above New Section 1 Page 75 Positional Bias in simple terms: The issue with positional bias, is that when the order of tools in a list can affect the ag ent's tool selection accuracy.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_028"
+                ],
+                [
+                    "topic",
+                    "• Code for evaluating And Cleaning Data New"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        },
+        {
+            "id": "chunk_032",
+            "topic": "ReAct Prompting Technique Explanation",
+            "educational": "The ReAct (Reason + Act) prompting technique combines reasoning and actions. The model alternates between thinking and performing steps to reach better answers. Step 1: The model reasons about the question. Step 2: It performs an action, like retrieving or inferring. Step 3: It observes the result. Step 4: It reflects and improves the reasoning until it finds a confident final answer.",
+            "enterprise": "ReAct prompting combines reasoning and acting in a single loop: THINK → ACT → OBSERVE → REFLECT → FINAL ANSWER. This method helps the model stay explainable and factual while solving multi-step questions or retrieval tasks.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_032"
+                ],
+                [
+                    "topic",
+                    "ReAct Prompting Technique Explanation"
+                ],
+                [
+                    "source",
+                    "Prompting_Techniques_Doc"
+                ]
+            ]
+        },
+        {
+            "id": "chunk_011",
+            "topic": "Get the Scoring Tool: The code first loads",
+            "educational": "Get the Scoring Tool: The code first loads the necessary evaluation software (from evaluate import load) and specifically selects the SQuAD v2 scor ing method (squad_metric = load(\"squad_v2\")). This sets up the rules for how answers will be judged.1. Define the Right Answer and Guesses: It sets the correct answer as \"Paris\" and creates a list of three different guesses to test: one that is perfectly right, one that is completely wrong, and one that is partially right.2. Score Each Guess Individually: The code then goes through the three guesses one by one: It puts the guess and the true answer into the specific format the SQuAD scorer requires.○ It asks the SQuAD scorer to calculate the F1 score (a measure of accuracy) for that single guess. ○ It prints the F1 score for the current guess.○3. Calculate the Total Average Score: While scoring individually, the code saves all the guesses and the true answers. Finally, it tells the SQuAD scorer to calculate the overall cumulative score across all three attempts. ○ It prints the final average result, which shows the system's performance across the entire set of examples.○4. Text -everywhere this denotes headings and sub -headings. Text -Main section no New Section 1 Page 11 APPLIED AI BUILDING natural language processing (NLP) PPS WITH HUGGING FACE Section 1 Question Answering(Qu -An) natural language processing (NLP) TASK Question Answering (Qu -An): This is a popular task in natural language processing (NLP) where the goal is to answer questions posed by the user based on a given context or input body of text. Qu -An can be used for customer queries on websites or searching encyclopedias for answers. The process involves tokenizing and vectorizing the input corpus and the question, then using a model to find the be st matching answer from the context. • Hugging Face Pipelines: Hugging Face provides predefined pipelines that simplify the implementation of question -answering tasks. • Types of Qu -An Open Domain Question Answering (ODQA): These systems can answer any question on any topic, like Google search. They need a lo t of data (like Wikipedia), which makes them big and costly, but they are less accurate because they cover so much information.• Closed Domain Question Answering (CDQA): These systems focus on specific topics (like medical information). They are smaller, cheaper, and more accurate because they only deal with a limited range of information. They are often used in businesses to answer questions about specific prod ucts.• SQuAD (Stanford Question Answering Dataset): This is a collection of questions and answers used to train and test systems that answer questions.• SQuAD Metric: Think of this as a special set of rules to measure how good the answers from a system are. It includes:• F1 Score:",
+            "enterprise": "Get the Scoring Tool: The code first loads the necessary evaluation software (from evaluate import load) and specifically selects the SQuAD v2 scor ing method (squad_metric = load(\"squad_v2\")). This sets up the rules for how answers will be judged.1. Define the Right Answer and Guesses: It sets the correct answer as \"Paris\" and creates a list of three different guesses to test: one that is perfectly right, one that is completely wrong, and one that is partially right.2. Score Each Guess Individually: The code then goes through the three guesses one by one: It puts the guess and the true answer into the specific format the SQuAD scorer requires.○ It asks the SQuAD scorer to calculate the F1 score (a measure of accuracy) for that single guess. ○ It prints the F1 score for the current guess.○3.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_011"
+                ],
+                [
+                    "topic",
+                    "Get the Scoring Tool: The code first loads"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        }
+    ],
+    "evaluation": {
+        "bleu": 0.0021,
+        "rouge1_f": 0.1558,
+        "rougeL_f": 0.0844,
+        "mse_length": 65536.0,
+        "mae_length": 256.0,
+        "rmse_length": 256.0
+    }
+}

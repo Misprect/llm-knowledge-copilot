@@ -1,0 +1,34 @@
+🧠 Question:
+Decide whether GPT or BERT is better suited for a text classification task and explain why.
+
+🎯 Strategy: cod
+
+💬 Final Answer:
+BERT is generally better suited for text classification tasks.
+
+**Explanation:**
+
+BERT's architecture, particularly its bidirectional training (Masked Language Model and Next Sentence Prediction), allows it to deeply understand the context of words within a sentence. This bidirectional understanding is crucial for tasks like classification where the meaning of the entire input is important.
+
+GPT, on the other hand, is primarily a generative model trained to predict the next token. While it can be adapted for classification, its unidirectional nature (predicting forward) might not capture the nuanced contextual relationships as effectively as BERT for classification purposes.
+
+**4-Step Chain:**
+
+1.  **BERT's bidirectional training:** MLM/NSP capture context from both directions.
+2.  **GPT's unidirectional training:** Predicts next token, focusing on forward context.
+3.  **Classification needs:** Requires understanding of full input context.
+4.  **BERT excels:** Bidirectional nature better suits classification's contextual demands.
+
+**10-Word Summary:**
+
+BERT's bidirectional context understanding makes it superior for text classification.
+
+📊 Evaluation:
+{
+    "bleu": 0.0104,
+    "rouge1_f": 0.2162,
+    "rougeL_f": 0.1622,
+    "mse_length": 14884.0,
+    "mae_length": 122.0,
+    "rmse_length": 122.0
+}

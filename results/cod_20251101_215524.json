@@ -1,0 +1,94 @@
+{
+    "answer": "BERT is generally better suited for text classification tasks.\n\n**Explanation:**\n\nBERT's architecture, particularly its bidirectional training (Masked Language Model and Next Sentence Prediction), allows it to deeply understand the context of words within a sentence. This bidirectional understanding is crucial for tasks like classification where the meaning of the entire input is important.\n\nGPT, on the other hand, is primarily a generative model trained to predict the next token. While it can be adapted for classification, its unidirectional nature (predicting forward) might not capture the nuanced contextual relationships as effectively as BERT for classification purposes.\n\n**4-Step Chain:**\n\n1.  **BERT's bidirectional training:** MLM/NSP capture context from both directions.\n2.  **GPT's unidirectional training:** Predicts next token, focusing on forward context.\n3.  **Classification needs:** Requires understanding of full input context.\n4.  **BERT excels:** Bidirectional nature better suits classification's contextual demands.\n\n**10-Word Summary:**\n\nBERT's bidirectional context understanding makes it superior for text classification.",
+    "strategy": "cod",
+    "retrieved": [
+        {
+            "id": "chunk_007",
+            "topic": "Describe the types of bias that natural language",
+            "educational": "Describe the types of bias that natural language processing (NLP) models like BERT and GPT may exhibit.• Training regimens: Compare different training regimens for models like BERT and GPT.• Encoders and decoders: Define the roles of encoders and decoders in natural language processing (NLP).• Tokenization: Understand tokenization and its use in natural language processing (NLP).• Attention mechanisms: Describe attention calculations and their use in natural language processing (NLP) models.• Fine -tuning BERT: List examples of starting parameters for fine -tuning BERT models. • What is TensorFlow? TensorFlow provides tools for accessing standard datasets and handling massive amounts of data through data pi pelines. It simplifies the process of building, training, and exporting machine learning models with an entire ecosyst em designed for this purpose. • Distributed Training: TensorFlow supports distributed training, allowing you to train models faster by spreading the workload across multiple machines. • Pre-trained Models: TensorFlow Hub and Model Garden offer pre -trained models that you can fine -tune or customize for specific tasks. TensorFlow models can be deployed on various platforms, including servers, edge devices, browsers, and mobile app s. TFX tools help automate the MLOps process, including tracking model training, monitoring performance, and retrai ning models as needed. • Section 1 natural language processing (NLP) And Transformers Definition of natural language processing (NLP): Natural Language Processing (natural language processing (NLP)) focuses on processing natural languages like English and converting them into numbers that computers can understand.• Complexity of natural language processing (NLP): natural language processing (NLP) is challenging due to the complexity and ambiguity of human language, which is constantly evolving.• natural language processing (NLP) Tasks: Some common natural language processing (NLP) tasks include:• Sentence Classification: Classifying whole sentences, such as sentiment analysis.• Named Entity Recognition: Classifying words in a sentence as persons, locations, or organizations.• Auto -generating Text: Generating grammatically correct text.• Translation: Translating text between languages.• Summarization: Summarizing text.• Question Answering: Answering questions based on provided text.• Transfer Learning Components of Transfer Learning: Transfer learning involves two main components: pre -training and fine -tuning. Pre-training involves training a model from scratch on large datasets.○ Fine -tuning involves training the pre -trained model on specific tasks. ○• Benefits of Transfer Learning: Fine -tuning a pre -trained model takes much less time and requires smaller datasets compared to pre -training. This approach can achieve state -of-the-art results with less computational resources.• Tokenization methods used by models BERT: Uses WordPiece tokenization. This method breaks down words into sub words, particularly for rarely used words, while fr equently used words remain intact.• GPT-2 and GPT -3: Use byte -pair encoding (BPE) for tokenization. This method also breaks down words into sub words but uses a different technique compared to WordPiece.• Fine tuning BERT Fine-tuning Process:",
+            "enterprise": "Describe the types of bias that NLP models like BERT and GPT may exhibit.• Training regimens: Compare different training regimens for models like BERT and GPT.• Encoders and decoders: Define the roles of encoders and decoders in NLP.• Tokenization: Understand tokenization and its use in NLP.• Attention mechanisms: Describe attention calculations and their use in NLP models.• Fine -tuning BERT: List examples of starting parameters for fine -tuning BERT models. • What is TensorFlow? TensorFlow provides tools for accessing standard datasets and handling massive amounts of data through data pi pelines. It simplifies the process of building, training, and exporting machine learning models with an entire ecosyst em designed for this purpose. • Distributed Training: TensorFlow supports distributed training, allowing you to train models faster by spreading the workload across multiple machines.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_007"
+                ],
+                [
+                    "topic",
+                    "Describe the types of bias that natural language"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        },
+        {
+            "id": "chunk_001",
+            "topic": "• It doesn’t train on datasets but it",
+            "educational": "• It doesn’t train on datasets but it understand language by using MLM and NSP. Bert is trained on• MLM(masked language model) -it is trained based on the prediction of mask word. Ex summer Olympics were<mask> from 2020 to 2021 the ans is postponed. ○ If Bert answers correct fine or else it is trained &weight adjust to generate correct ans for the next time.• NSP(next sentence prediction) -it asks doe the next sentence follow immediately after the first? • GPT -3 G-generative: -predicts a future token based on the past tokens ○ P-prediction: -trained on large corpus of data ○ t-transformers -decoder portion of the t.a. their best optimal approach and objective is few shot learning with large model○ HELM -holistic evaluation of language models used for training and evaluating models. ○ Chinchilla Key Insight: The DeepMind team found that large language models were undertrained. By training a smaller model for longer with more data, Chinchilla achieved better performance.• Performance: Chinchilla excels in various tasks such as reading comprehension and question answering, even though it uses the same computational budget as larger models.• It works in two dimensionally as it works on model and training.• Open models v/s Proprietary models Aspect Open models Proprietary models Accessibility Public access to weights and code (e.g., Meta's OPT, Hugging Face's BLOOM)Public access to weights and code (e.g., Meta's OPT, Hugging Face's BLOOM) Collaboration Developed with wide community contributions Developed with wide community contributions Performance Often lag behind due to fewer resources Generally better performance due to significant investment Usage Restrictions Fewer restrictions, some non -commercial licenses (e.g., Meta's Llama)Strict licensing terms controlled by the owning company HELM Itcompares large language models across tasks and datasets, providing a comprehensive view of performance in terms of accuracy, robustness, fairness, and efficiency.• Limitations: HELM does not measure factors like model fine -tuning ease, cost, latency, or availability, which are crucial for practical use. • Reason to compare llm? The purpose of comparing large language models is to evaluate their performance on various tasks and determine which model be st suits specific needs. By comparing models, you can assess factors like accuracy, robustness, and efficiency, ensuring you choose the most ef fective model for your business or project requirements• LLM trends Scaling Laws : Initially, increasing model size was the primary focus for improving performance, guided by scaling laws. As models grew, the cost of training became a critical factor, leading to a focus on optimizing model size within budget co nstraints.",
+            "enterprise": "• It doesn’t train on datasets but it understand language by using MLM and NSP. Bert is trained on• MLM(masked language model) -it is trained based on the prediction of mask word. Ex summer Olympics were<mask> from 2020 to 2021 the ans is postponed. ○ If Bert answers correct fine or else it is trained &weight adjust to generate correct ans for the next time.• NSP(next sentence prediction) -it asks doe the next sentence follow immediately after the first? • GPT -3 G-generative: -predicts a future token based on the past tokens ○ P-prediction: -trained on large corpus of data ○ t-transformers -decoder portion of the t.a. their best optimal approach and objective is few shot learning with large model○ HELM -holistic evaluation of language models used for training and evaluating models. ○ Chinchilla Key Insight: The DeepMind team found that large language models were undertrained.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_001"
+                ],
+                [
+                    "topic",
+                    "• It doesn’t train on datasets but it"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        },
+        {
+            "id": "chunk_010",
+            "topic": "○ Pre training task is very similar to",
+            "educational": "○ Pre training task is very similar to summarization.○ Trained using MLM(mask language modelling) and GSG(Gap sentence generation)○ GSG - It involves replacing entire sentences in the input text with a mask token. The model then learns to predict and generate the mis sing sentences, which helps it create better summaries.○ BERT large -CNN works same as Pegasus, as a model (first point in Pegasus) New Section 1 Page 9 works same as Pegasus, as a model (first point in Pegasus)○ is trained on English language and CNN mail dataset ○ Is good for summarization○ APPLIED AI BUILDING natural language processing (NLP) PPS WITH HUGGING FACE Section 1 Question Answering(Qu -An) natural language processing (NLP) TASK Question Answering (Qu -An): This is a popular task in natural language processing (NLP) where the goal is to answer questions posed by the user based on a given context or input body of text. Qu -An can be used for customer queries on websites or searching encyclopedias for answers. The process involves tokenizing and vectorizing the input corpus and the question, then using a model to find the be st matching answer from the context. • Hugging Face Pipelines: Hugging Face provides predefined pipelines that simplify the implementation of question -answering tasks. • Types of Qu -An Open Domain Question Answering (ODQA): These systems can answer any question on any topic, like Google search. They need a lo t of data (like Wikipedia), which makes them big and costly, but they are less accurate because they cover so much information.• Closed Domain Question Answering (CDQA): These systems focus on specific topics (like medical information). They are smaller, cheaper, and more accurate because they only deal with a limited range of information. They are often used in businesses to answer questions about speci fic products.• SQuAD (Stanford Question Answering Dataset): This is a collection of questions and answers used to train and test systems that answer questions.• SQuAD Metric: Think of this as a special set of rules to measure how good the answers from a system are. It includes:• F1 Score: A way to check how many correct answers the system gives.• Exact Match: A way to see if the system's answer exactly matches the correct answer.• Hugging Face Metrics Package: This is a tool provided by Hugging Face that includes the SQuAD metric. It helps you compare th e system's answers with the correct ones to see how well the system is performing.• In simple terms, SQuAD and its metrics help you measure how accurately a question -answering system is working by comparing its answers to the correct ones. • New Section 1 Page 10 Code Explaination Here is the simple, step -by-step explanation of what the code does:",
+            "enterprise": "○ Pre training task is very similar to summarization.○ Trained using MLM(mask language modelling) and GSG(Gap sentence generation)○ GSG - It involves replacing entire sentences in the input text with a mask token. The model then learns to predict and generate the mis sing sentences, which helps it create better summaries.○ BERT large -CNN works same as Pegasus, as a model (first point in Pegasus) New Section 1 Page 9 works same as Pegasus, as a model (first point in Pegasus)○ is trained on English language and CNN mail dataset ○ Is good for summarization○ APPLIED AI BUILDING NLP PPS WITH HUGGING FACE Section 1 Question Answering(Qu -An) NLP TASK Question Answering (Qu -An): This is a popular task in NLP where the goal is to answer questions posed by the user based on a given context or input body of text.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_010"
+                ],
+                [
+                    "topic",
+                    "○ Pre training task is very similar to"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        },
+        {
+            "id": "chunk_016",
+            "topic": "Cross -encoders are used to re -rank retrieved",
+            "educational": "Cross -encoders are used to re -rank retrieved documents more accurately than cosine similarity alone. They compare queries and contexts at a finer level. • Performance Testing: The video emphasizes testing the performance of retrieval systems with and without cross -encoders to measure improvements. While cross -encoders improve accuracy, they add computational overhead. The video discusses balancing this trade -off based on your needs. • Docx for the code semantic-s earch-test Section 3 Introduction to Prompt Engineering Prompt Engineering: Designing inputs for LLMs to guide them in producing relevant and coherent outputs.• LLMs (Large Language Models): Advanced AI models like GPT -3 and ChatGPT used for natural language processing tasks. • Just Ask Principle(few -short -learning): Keeping prompts clear and succinct for better LLM responses. • Instruction First, Context Second: Structuring prompts with instructions first and context second to aid LLM understanding.• System Prompt: The overall instruction for the entire conversation, set at the beginning.• User Prompt: The specific question or task given to the LLM after the system prompt.• Temperature: A parameter that controls the randomness of the LLM's responses; lower values make responses more deterministic.• Auto -aggressive Models: LLMs that predict one token at a time, where the order of input matters.• Prefix: Additional text added to structure the output format.• Alignment: Ensuring the LLM's responses match the desired format and instructions.• Reinforcement Learning from Human Feedback (RLHF): A method used to align LLMs with human expectations.• Deterministic: Producing consistent and reproducible outputs.• Token: The basic unit of text (word or character) processed by LLMs.• Code for prompt engineering 03prompt _engineer... Working with prompt models across llm Few -Shot Learning: Few -shot learning is effective across most LLMs, providing examples to guide the model's responses. • Instruction Alignment: Instruction -aligned models like FLAN -T5 are designed to follow specific instructions better than non -aligned models like GPT -J.(examples of instruction prompting.) • Top_p: This limits the number of possible words the AI can choose from when generating a response. A lower top_p means fewer choices, making the response more focused. • DAY 3 Section 4 Retrieval -Augmented Generation and Ai Agents Introduction to RAG New Section 1 Page 19 RAG System Components: A RAG system combines semantic search (retrieving static information) with generative AI (dynamic conv ersation generation), • typically involving an indexer, a retriever, and a generator. Effective prompts are crucial for RAG systems, incorporating techniques like few -shot learning, chain -of-thought prompting, and prefix notation. • Evaluation Metrics: Evaluating RAG systems involves metrics like precision and recall for the retriever and various criteria for the generator, such as accuracy and conversational quality.",
+            "enterprise": "Cross -encoders are used to re -rank retrieved documents more accurately than cosine similarity alone. They compare queries and contexts at a finer level. • Performance Testing: The video emphasizes testing the performance of retrieval systems with and without cross -encoders to measure improvements. While cross -encoders improve accuracy, they add computational overhead. The video discusses balancing this trade -off based on your needs. • Docx for the code semantic-s earch-test Section 3 Introduction to Prompt Engineering Prompt Engineering: Designing inputs for LLMs to guide them in producing relevant and coherent outputs.• LLMs (Large Language Models): Advanced AI models like GPT -3 and ChatGPT used for natural language processing tasks. • Just Ask Principle(few -short -learning): Keeping prompts clear and succinct for better LLM responses.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_016"
+                ],
+                [
+                    "topic",
+                    "Cross -encoders are used to re -rank retrieved"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        }
+    ],
+    "evaluation": {
+        "bleu": 0.0104,
+        "rouge1_f": 0.2162,
+        "rougeL_f": 0.1622,
+        "mse_length": 14884.0,
+        "mae_length": 122.0,
+        "rmse_length": 122.0
+    }
+}

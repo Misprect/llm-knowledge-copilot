@@ -1,0 +1,94 @@
+{
+    "answer": "\"La connaissance est le pouvoir.\"",
+    "strategy": "zero_shot",
+    "retrieved": [
+        {
+            "id": "chunk_031",
+            "topic": "•Practiced prompt techniques such as persona,chain of thought,",
+            "educational": "•Practiced prompt techniques such as persona,chain of thought, ReAct, few shot 27 October 2025 14:23 New Section 1 Page 80",
+            "enterprise": "•Practiced prompt techniques such as persona,chain of thought, ReAct, few shot 27 October 2025 14:23 New Section 1 Page 80",
+            "meta": [
+                [
+                    "id",
+                    "chunk_031"
+                ],
+                [
+                    "topic",
+                    "•Practiced prompt techniques such as persona,chain of thought,"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        },
+        {
+            "id": "chunk_027",
+            "topic": "The efficiency of different models can be compared",
+            "educational": "The efficiency of different models can be compared using probing, showing how well they retain informat ion relative to their size and architecture. • Parametric Knowledge It refers to the information that is embedded within the parameters of the LLM itself. • This is the knowledge that the model has learned during its training phase and can recall without needing external input. • For example, if you ask an LLM where San Francisco is located, it should be able to answer from its parametric knowledge.• Context Knowledge It involves the information that the LLM uses from the input context during a specific interaction. • This includes any additional data or context provided in the prompt or conversation. • For instance, in retrieval -augmented generation (RAG), the LLM uses both its parametric knowledge and the context provided to generate a response. • Code for probing llm to play games probing_LL M_to_pla... Section 6 -Evaluating LLM -Fine Tuning Fine -Tuning Objectives New Section 1 Page 68 Metrics for fine tuning success Model Distillation: This involves training a smaller, more efficient \"student\" model to replicate the performance of a larger \"teacher\" model, resulting in better memory consumption and latency. • Evaluating and Cleaning Data New Section 1 Page 69 AUM, or Area Under the Margin, It is a technique used to identify mislabeled data during the fine -tuning process of a model. AUM helps to flag data points that might be incorrectly labeled, which can negatively impact the model's performance . It measures the difference between the correct label's logit (a raw prediction score) and the next highest logit over multiple training epochs. Indicates the correct label's logit is consistently higher than the next highest logit, suggesting the data point i s likely correctly labeled. Indicates the correct label's logit is often lower than the next highest logit, suggesting the data point might be m islabeled. • This image illustrates how a system handles redundant (similar) and conflicting (contradictory) data mapping. Well -Defined (Left Side) Concept: Redundant Data.• What it means: Different ways of asking the same question (\"How do I brush my teeth?\") lead to the same correct answer (\"firs t start by grabbing your toothbrush...\"). This is consistent and likely not harmful (just potentially inefficient).• Ill-Defined (Right Side) Concept: Conflicting Data.• What it means: A question (\"How to brush teeth??\") or a slightly different input leads to an illogical or contradictory answe r (\"Go to bed!!\"). This is inconsistent and unreliable. The system is unpredictable and the conflicting data should be flagged for r eview and correction.",
+            "enterprise": "The efficiency of different models can be compared using probing, showing how well they retain informat ion relative to their size and architecture. • Parametric Knowledge It refers to the information that is embedded within the parameters of the LLM itself. • This is the knowledge that the model has learned during its training phase and can recall without needing external input. • , if you ask an LLM where San Francisco is located, it should be able to answer from its parametric knowledge.• Context Knowledge It involves the information that the LLM uses from the input context during a specific interaction. • This includes any additional data or context provided in the prompt or conversation. • For instance, in retrieval -augmented generation (RAG), the LLM uses both its parametric knowledge and the context provided to generate a response.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_027"
+                ],
+                [
+                    "topic",
+                    "The efficiency of different models can be compared"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        },
+        {
+            "id": "chunk_024",
+            "topic": "Code for step 4 After this same steps",
+            "educational": "Code for step 4 After this same steps as step 3 till the code user, response, generate_kwargs part. New Section 1 Page 54 New Section 1 Page 55 New Section 1 Page 56 The code is mainly incomplete because the video was being taught by the teacher was moving too fast and only showed code in broken parts hence it is here what I got. DAY 9 Section 11 Moving LLM Into Production Cost Projecting and deploying LLM's to production Optimization Techniques: Reduces computational requirements by lowering the precision of weights and biases, leading to smaller and fast er models. Removes less important weights in the network, enhancing computational efficiency and reducing model size.• Knowledge Distillation: Trains a smaller model (student) to replicate the behavior of a larger model (teacher), maintaining p erformance while reducing computational needs. • Knowledge Distillation Elaborated CODE -Knowledge Distillation knowledge distillatio... Section 12 LLM Evaluation Evaluating Generative Taks: PART 1 New Section 1 Page 57 CODE New Section 1 Page 58 Same code to be written for mistral v3 New Section 1 Page 59 New Section 1 Page 60 New Section 1 Page 61 Evaluating understanding tasks: Representations of text data used for various tasks like semantic search and recommendation engines.• Classification: Categorizing text into predefined buckets or classes using metrics like accuracy, precision, recall, and F1 s core. • Net Promoter Score (NPS): A metric used to evaluate the effectiveness of recommendation systems.• Cosine Similarity: A measure used to evaluate the similarity between two embedding vectors.• Calibration: Ensuring the model's predicted probabilities align with actual outcomes.• Expected Calibration Error (ECE): A metric to measure the difference between predicted probabilities and actual outcomes.• Token Probabilities: The likelihood of each token being the correct output in a generative task.• Prompt Engineering: Crafting prompts to improve model performance and calibration.• Evaluation of Embedders: Embedders are typically evaluated based on the downstream tasks they are used for, such as semantic search or recommendation engines. ○ The performance of these tasks helps determine the effectiveness of the embedders.○ DETAILED EVALUATING LLM Probing in LLM New Section 1 Page 62 DAY 1 Section 1 -Foundation Of LLM Evaluation Intro To evaluation: Why it matters Definition of Evaluation: Evaluation systematically assesses a model's performance using metrics like accuracy, reliability, cost, and scalability. • Importance of Evaluation: It helps determine if models are improving, which model or method to use, and whether the AI system is trustworthy and learning effectively. • Types of Evaluation Proactive Evaluation: This involves identifying potential problems before they occur. ○ For instance, during the training phase, you might set up metrics to catch issues like data bias or overfitting early on.○ Setting Metrics:",
+            "enterprise": "Code for step 4 After this same steps as step 3 till the code user, response, generate_kwargs part. New Section 1 Page 54 New Section 1 Page 55 New Section 1 Page 56 The code is mainly incomplete because the video was being taught by the teacher was moving too fast and only showed code in broken parts hence it is here what I got. DAY 9 Section 11 Moving LLM Into Production Cost Projecting and deploying LLM's to production Optimization Techniques: Reduces computational requirements by lowering the precision of weights and biases, leading to smaller and fast er models. Removes less important weights in the network, enhancing computational efficiency and reducing model size.• Knowledge Distillation: Trains a smaller model (student) to replicate the behavior of a larger model (teacher), maintaining p erformance while reducing computational needs.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_024"
+                ],
+                [
+                    "topic",
+                    "Code for step 4 After this same steps"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        },
+        {
+            "id": "chunk_011",
+            "topic": "Get the Scoring Tool: The code first loads",
+            "educational": "Get the Scoring Tool: The code first loads the necessary evaluation software (from evaluate import load) and specifically selects the SQuAD v2 scor ing method (squad_metric = load(\"squad_v2\")). This sets up the rules for how answers will be judged.1. Define the Right Answer and Guesses: It sets the correct answer as \"Paris\" and creates a list of three different guesses to test: one that is perfectly right, one that is completely wrong, and one that is partially right.2. Score Each Guess Individually: The code then goes through the three guesses one by one: It puts the guess and the true answer into the specific format the SQuAD scorer requires.○ It asks the SQuAD scorer to calculate the F1 score (a measure of accuracy) for that single guess. ○ It prints the F1 score for the current guess.○3. Calculate the Total Average Score: While scoring individually, the code saves all the guesses and the true answers. Finally, it tells the SQuAD scorer to calculate the overall cumulative score across all three attempts. ○ It prints the final average result, which shows the system's performance across the entire set of examples.○4. Text -everywhere this denotes headings and sub -headings. Text -Main section no New Section 1 Page 11 APPLIED AI BUILDING natural language processing (NLP) PPS WITH HUGGING FACE Section 1 Question Answering(Qu -An) natural language processing (NLP) TASK Question Answering (Qu -An): This is a popular task in natural language processing (NLP) where the goal is to answer questions posed by the user based on a given context or input body of text. Qu -An can be used for customer queries on websites or searching encyclopedias for answers. The process involves tokenizing and vectorizing the input corpus and the question, then using a model to find the be st matching answer from the context. • Hugging Face Pipelines: Hugging Face provides predefined pipelines that simplify the implementation of question -answering tasks. • Types of Qu -An Open Domain Question Answering (ODQA): These systems can answer any question on any topic, like Google search. They need a lo t of data (like Wikipedia), which makes them big and costly, but they are less accurate because they cover so much information.• Closed Domain Question Answering (CDQA): These systems focus on specific topics (like medical information). They are smaller, cheaper, and more accurate because they only deal with a limited range of information. They are often used in businesses to answer questions about specific prod ucts.• SQuAD (Stanford Question Answering Dataset): This is a collection of questions and answers used to train and test systems that answer questions.• SQuAD Metric: Think of this as a special set of rules to measure how good the answers from a system are. It includes:• F1 Score:",
+            "enterprise": "Get the Scoring Tool: The code first loads the necessary evaluation software (from evaluate import load) and specifically selects the SQuAD v2 scor ing method (squad_metric = load(\"squad_v2\")). This sets up the rules for how answers will be judged.1. Define the Right Answer and Guesses: It sets the correct answer as \"Paris\" and creates a list of three different guesses to test: one that is perfectly right, one that is completely wrong, and one that is partially right.2. Score Each Guess Individually: The code then goes through the three guesses one by one: It puts the guess and the true answer into the specific format the SQuAD scorer requires.○ It asks the SQuAD scorer to calculate the F1 score (a measure of accuracy) for that single guess. ○ It prints the F1 score for the current guess.○3.",
+            "meta": [
+                [
+                    "id",
+                    "chunk_011"
+                ],
+                [
+                    "topic",
+                    "Get the Scoring Tool: The code first loads"
+                ],
+                [
+                    "source",
+                    "New Section 1.pdf"
+                ]
+            ]
+        }
+    ],
+    "evaluation": {
+        "bleu": 0.0537,
+        "rouge1_f": 0.5455,
+        "rougeL_f": 0.5455,
+        "mse_length": 0.0,
+        "mae_length": 0.0,
+        "rmse_length": 0.0
+    }
+}

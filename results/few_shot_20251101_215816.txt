@@ -1,0 +1,18 @@
+🧠 Question:
+Classify the following sentence as positive, negative, or neutral sentiment:
+“The movie was a visual masterpiece but painfully slow in parts.”
+
+🎯 Strategy: few_shot
+
+💬 Final Answer:
+Negative
+
+📊 Evaluation:
+{
+    "bleu": 0.0,
+    "rouge1_f": 0.0,
+    "rougeL_f": 0.0,
+    "mse_length": 49.0,
+    "mae_length": 7.0,
+    "rmse_length": 7.0
+}

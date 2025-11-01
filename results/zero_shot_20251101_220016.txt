@@ -1,0 +1,17 @@
+🧠 Question:
+Translate the sentence “Knowledge is power” into French.
+
+🎯 Strategy: zero_shot
+
+💬 Final Answer:
+"La connaissance est le pouvoir."
+
+📊 Evaluation:
+{
+    "bleu": 0.0537,
+    "rouge1_f": 0.5455,
+    "rougeL_f": 0.5455,
+    "mse_length": 0.0,
+    "mae_length": 0.0,
+    "rmse_length": 0.0
+}
