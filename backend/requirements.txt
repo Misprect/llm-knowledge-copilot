@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+google-generativeai
+sentence-transformers
+faiss-cpu
+numpy
+nltk
+rouge-score
+scikit-learn
