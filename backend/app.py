@@ -10,7 +10,7 @@ import google.generativeai as genai
 
 # Local imports
 from rag_utils import retrieve, PROMPTS
-from tot_orchestrator import choose_best
+from tot_orchestrator import choose_best_two
 from evaluation import evaluate_metrics
 
 # ------------------------------
@@ -68,7 +68,7 @@ class QueryRequest(BaseModel):
 # 4️⃣ Gemini helper
 # ------------------------------
 def call_gemini(prompt: str, temperature=0.3, max_output_tokens=512, model_name: Optional[str] = None):
-    model_to_use = model_name or GEMINI_MODEL
+    model_to_use = model_name or GЕМINI_MODEL if 'GЕМINI_MODEL' in globals() else model_name or GEMINI_MODEL
     try:
         model = genai.GenerativeModel(model_to_use)
         logging.info(f"[Gemini] Model={model_to_use} | Prompt: {prompt[:150]}...")
@@ -80,6 +80,7 @@ def call_gemini(prompt: str, temperature=0.3, max_output_tokens=512, model_name:
         )
         if hasattr(resp, "text") and resp.text:
             return resp.text.strip()
+        # fallback to candidates
         if hasattr(resp, "candidates") and resp.candidates:
             try:
                 return resp.candidates[0].content.parts[0].text.strip()
@@ -88,6 +89,12 @@ def call_gemini(prompt: str, temperature=0.3, max_output_tokens=512, model_name:
         return str(resp)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Gemini API error: {e}")
+
+# ------------------------------
+# health
+@app.get("/ping")
+def ping():
+    return {"ok": True, "time": datetime.datetime.utcnow().isoformat()}
 
 # ------------------------------
 # 5️⃣ Query endpoint (main logic)
@@ -121,10 +128,23 @@ def query(req: QueryRequest):
 
     # Step 3️⃣ Model call
     if strat == "tot":
-        raw = call_gemini(prompt + "\n\nGenerate 3 candidate reasoning paths labeled Path A, Path B, Path C.", model_name=model_name)
-        parts = [p.strip() for p in raw.split("Path") if p.strip()]
-        candidates = [{"text": ("Path " + p)} for p in parts]
-        best, scored = choose_best(candidates, q)
+        raw = call_gemini(prompt + "\n\nGenerate 5 candidate reasoning paths (1-5).", model_name=model_name)
+        # parse lines with numbers (1.,2., etc.)
+        lines = [ln.strip() for ln in raw.splitlines() if ln.strip()]
+        candidates = []
+        for ln in lines:
+            # try to strip leading numbering
+            if ln[0].isdigit() and "." in ln:
+                cleaned = ln.split(".", 1)[1].strip()
+            else:
+                cleaned = ln
+            candidates.append({"text": cleaned})
+        # fallback ensure at least 2 candidates
+        if len(candidates) < 2:
+            candidates = [{"text": f"Fallback reasoning path for: {q} - {i}"} for i in range(1,6)]
+
+        top2, scored_all = choose_best_two(candidates, q)
+        best = top2[0][1]  # top candidate dict
         final_prompt = f"Use the chosen path:\n{best['text']}\n\nNow answer: {q}"
         final_answer = call_gemini(final_prompt, model_name=model_name)
     else:
@@ -159,8 +179,6 @@ def query(req: QueryRequest):
             return [make_json_safe(i) for i in obj]
         elif isinstance(obj, (set, tuple)):
             return list(obj)
-        elif isinstance(obj, type({}.items())):
-            return list(obj)
         else:
             try:
                 json.dumps(obj)
@@ -168,15 +186,15 @@ def query(req: QueryRequest):
             except TypeError:
                 return str(obj)
 
-    result = make_json_safe(result)
+    safe_result = make_json_safe(result)
 
     with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=4)
+        json.dump(safe_result, f, ensure_ascii=False, indent=4)
 
     with open(txt_path, "w", encoding="utf-8") as f:
         f.write(f"🧠 Question:\n{q}\n\n🎯 Strategy: {strat}\n\n💬 Final Answer:\n{final_answer}\n\n")
         if evaluation:
-            f.write(f"📊 Evaluation:\n{json.dumps(evaluation, indent=4)}\n")
+            f.write(f"📊 Evaluation:\n{json.dumps(evaluation, indent=4, ensure_ascii=False)}\n")
 
     return result
 

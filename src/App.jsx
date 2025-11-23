@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import JsonViewer from "./components/JsonViewer";
+import ScoreChart from "./components/ScoreChart";
 
 export default function App() {
   const [question, setQuestion] = useState("");
@@ -10,24 +12,32 @@ export default function App() {
   const [evaluation, setEvaluation] = useState(null);
   const [dashboard, setDashboard] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [rawJson, setRawJson] = useState(null);
 
   const handleSubmit = async () => {
     if (!question.trim()) return alert("Enter a question!");
     setLoading(true);
     setAnswer("");
     setEvaluation(null);
+    setRawJson(null);
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/query", {
-      question,
-      strategy,
-      use_model: useModel,
-      reference_answer: reference || null,
-    });
-      setAnswer(res.data.answer);
-      setEvaluation(res.data.evaluation);
+      // 🔥 FIXED: send directly to backend port 8000
+      const res = await axios.post("http://localhost:8000/query", {
+        question,
+        strategy,
+        k: 4,
+        reference_answer: reference || null,
+        use_model: useModel,
+      });
+
+      setAnswer(res.data.answer || "");
+      setEvaluation(res.data.evaluation || null);
+      setRawJson(res.data || null);
     } catch (err) {
-      alert("Error: " + err.message);
+      console.error(err);
+      const msg = err?.response?.data?.detail || err.message;
+      alert("Error: " + msg);
     } finally {
       setLoading(false);
     }
@@ -35,18 +45,18 @@ export default function App() {
 
   const loadDashboard = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:8000/dashboard");
+      // 🔥 FIXED: backend dashboard endpoint on port 8000
+      const res = await axios.get("http://localhost:8000/dashboard");
       setDashboard(res.data);
-    } catch {
-      alert("No results found yet!");
+    } catch (err) {
+      console.error(err);
+      alert("No results found yet or dashboard error.");
     }
   };
 
   return (
     <div className="p-6 max-w-3xl mx-auto text-gray-800 space-y-6">
-      <h1 className="text-3xl font-bold text-center mb-6">
-        🧠 LLM Knowledge Copilot
-      </h1>
+      <h1 className="text-3xl font-bold text-center mb-6">🧠 LLM Knowledge Copilot</h1>
 
       <textarea
         className="w-full p-3 border rounded-lg"
@@ -107,7 +117,7 @@ export default function App() {
       {answer && (
         <div className="p-4 bg-gray-100 rounded-lg border">
           <h3 className="font-semibold mb-2">💬 Answer:</h3>
-          <p>{answer}</p>
+          <pre style={{ whiteSpace: "pre-wrap" }}>{answer}</pre>
         </div>
       )}
 
@@ -118,13 +128,21 @@ export default function App() {
         </div>
       )}
 
+      {rawJson && <JsonViewer data={rawJson} />}
+
       {dashboard && (
         <div className="p-4 bg-gray-50 rounded-lg border mt-4">
           <h3 className="font-semibold mb-2">📈 Dashboard Summary</h3>
           <p>Total Results: {dashboard.total_files}</p>
-          <p>Avg BLEU: {dashboard.average_bleu.toFixed(4)}</p>
-          <p>Avg ROUGE-1: {dashboard.average_rouge1.toFixed(4)}</p>
-          <p>Avg ROUGE-L: {dashboard.average_rougeL.toFixed(4)}</p>
+          <p>Avg BLEU: {dashboard.average_bleu}</p>
+          <p>Avg ROUGE-1: {dashboard.average_rouge1}</p>
+          <p>Avg ROUGE-L: {dashboard.average_rougeL}</p>
+
+          <ScoreChart
+            bleu={dashboard.average_bleu}
+            rouge1={dashboard.average_rouge1}
+            rougeL={dashboard.average_rougeL}
+          />
         </div>
       )}
     </div>

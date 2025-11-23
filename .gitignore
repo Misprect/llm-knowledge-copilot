@@ -1,43 +1,72 @@
-# ---- Python backend ----
+# ================================
+#           PYTHON BACKEND
+# ================================
+
+# Bytecode / caches
 __pycache__/
 *.py[cod]
 *.log
+
+# Virtual environments
 venv/
 .venv/
+
+# Environment files
 .env
 .env.*
 backend/.env
-backend/__pycache__/
+
+# Backend logs
 backend/*.log
+
+# FAISS / embedding artifacts (ignored)
+backend/index.faiss
+backend/metadata.npy
+
+# Allow ALL results (do NOT ignore result folders)
+# backend/results/  <-- removed so results are tracked
+
+# Ignore only runtime temp logs inside results if any
 backend/results_ss_runtime_logs/
 
-# FAISS or data artifacts
-index.faiss
-metadata.npy
-backend/data/*
-!backend/data/sample_genai_knowledge_base.json
+# ================================
+#           FRONTEND (React)
+# ================================
 
-# results — keep only samples
-results/*
-!results/*.json
-!results/*.txt
-!results_sample/
-
-# ---- Node/React frontend ----
 node_modules/
 dist/
 build/
+
+# Dev server or cache artifacts
+*.cache
+.vite/
+
+# frontend folder (if exists)
 frontend/node_modules/
 frontend/dist/
 frontend/build/
 
-# npm/yarn cache
+# ================================
+#      PACKAGE MANAGEMENT
+# ================================
 package-lock.json
 yarn.lock
 
-# IDE / system files
+# ================================
+#         EDITOR / SYSTEM
+# ================================
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
 
+# ================================
+#        MISC / GENERATED
+# ================================
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Allow dashboard image only if needed
+!backend/results/dashboardresults.png
