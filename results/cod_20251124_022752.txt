@@ -1,0 +1,13 @@
+🧠 Question:
+Why does giving the model a specific output format reduce hallucinations?
+
+🎯 Strategy: cod
+
+💬 Final Answer:
+1.  **Structured Output:** Defining a specific output format guides the LLM.
+2.  **Constraint Enforcement:** This format acts as a constraint, limiting free-form generation.
+3.  **Reduced Ambiguity:** Clear structure minimizes the LLM's need to "guess" or invent.
+4.  **Factual Grounding:** The format can prompt for specific, verifiable information.
+
+**Summary:** Specific formats constrain LLMs, reducing invention and improving factual output.
+

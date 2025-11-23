@@ -1,0 +1,17 @@
+🧠 Question:
+Give an example use-case where few-shot learning works better than zero-shot.
+
+🎯 Strategy: few_shot
+
+💬 Final Answer:
+Output: Few-shot excels when a few labeled examples guide a model to a specific task, outperforming zero-shot's reliance on general knowledge.
+
+📊 Evaluation:
+{
+    "bleu": 0.0214,
+    "rouge1_f": 0.3,
+    "rougeL_f": 0.25,
+    "mse_length": 36.0,
+    "mae_length": 6.0,
+    "rmse_length": 6.0
+}

@@ -1,0 +1,30 @@
+🧠 Question:
+If every model in a system improves accuracy by 10%, and you stack 3 models, does accuracy increase by 30%? Explain.
+
+🎯 Strategy: cot
+
+💬 Final Answer:
+**Reasoning:**
+
+The question asks if stacking three models, each improving accuracy by 10%, results in a 30% total increase in accuracy. This implies an additive increase. However, in machine learning, improvements are typically multiplicative. If a model improves accuracy by 10%, it means the new accuracy is 110% of the previous accuracy. When models are stacked or their improvements are combined, these percentage improvements compound.
+
+Let's assume an initial accuracy. For simplicity, let's use 50% as a baseline.
+
+1.  **First model's improvement:** If the first model improves accuracy by 10% (relative to the current accuracy), the new accuracy becomes:
+    Initial Accuracy * (1 + Improvement Percentage)
+    50% * (1 + 0.10) = 50% * 1.10 = 55%
+
+2.  **Second model's improvement:** The second model improves the *current* accuracy (55%) by another 10%:
+    Current Accuracy * (1 + Improvement Percentage)
+    55% * (1 + 0.10) = 55% * 1.10 = 60.5%
+
+3.  **Third model's improvement:** The third model improves the *current* accuracy (60.5%) by another 10%:
+    Current Accuracy * (1 + Improvement Percentage)
+    60.5% * (1 + 0.10) = 60.5% * 1.10 = 66.55%
+
+If the increase were additive, starting from 50%, a 30% increase would result in 50% + 30% = 80%. However, the compounding effect leads to 66.55%. The reason the total increase is less than 30% (in absolute terms, from 50% to 66.55% is a 16.55% increase) is that each subsequent 10% improvement is calculated on a larger base accuracy, leading to diminishing absolute gains.
+
+**Final Answer:**
+
+No, accuracy does not increase by 30%. When improvements are compounded, the total increase is less than the sum of individual percentage improvements. For example, starting with 50% accuracy,
+

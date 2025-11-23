@@ -1,0 +1,36 @@
+🧠 Question:
+If every model in a system improves accuracy by 10%, and you stack 3 models, does accuracy increase by 30%? Explain.
+
+🎯 Strategy: tot
+
+💬 Final Answer:
+Let's analyze this step-by-step.
+
+**No, accuracy does not increase by 30%.**
+
+Here's why:
+
+*   **Accuracy is not additive in this way.** When you "stack" models, you're typically combining their predictions in some way (e.g., averaging, voting, or using a meta-model). The improvement from each model is applied to the *current* accuracy, not to the original baseline.
+
+Let's illustrate with an example:
+
+Imagine you have a baseline accuracy of **50%**.
+
+1.  **Model 1 improves accuracy by 10%:**
+    *   This means the accuracy becomes 50% + (10% of 50%) = 50% + 5% = **55%**.
+    *   Alternatively, if the 10% improvement is *absolute* (meaning it adds 10 percentage points), the accuracy would be 50% + 10% = **60%**. The phrasing "improves accuracy by 10%" is often ambiguous, but the more common interpretation in machine learning is a relative improvement. Let's stick with the relative improvement for a more realistic scenario.
+
+2.  **Stacking Model 2:**
+    *   Now, the second model improves the *current* accuracy (55%) by another 10%.
+    *   New accuracy = 55% + (10% of 55%) = 55% + 5.5% = **60.5%**.
+
+3.  **Stacking Model 3:**
+    *   The third model improves the *current* accuracy (60.5%) by another 10%.
+    *   New accuracy = 60.5% + (10% of 60.5%) = 60.5% + 6.05% = **66.55%**.
+
+**Conclusion:**
+
+Starting from 50% accuracy, stacking three models, each improving accuracy by 10% (relative to the current accuracy), results in an overall accuracy of **66.55%**, not 80% (50% + 30%).
+
+The improvement is multiplicative rather than additive. Each subsequent improvement is a percentage of a larger number, leading to diminishing absolute gains.
+

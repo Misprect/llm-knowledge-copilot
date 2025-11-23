@@ -1,0 +1,8 @@
+🧠 Question:
+Why does giving the model a specific output format reduce hallucinations?
+
+🎯 Strategy: few_shot
+
+💬 Final Answer:
+Output: Specific formats constrain the model's generative space, reducing unexpected or fabricated outputs.
+

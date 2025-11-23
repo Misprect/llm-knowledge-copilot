@@ -1,0 +1,23 @@
+🧠 Question:
+What is retrieval-augmented generation?
+
+🎯 Strategy: react
+
+💬 Final Answer:
+THINK: The user is asking for a definition of "retrieval-augmented generation". The provided context contains a clear definition of RAG. Therefore, I should use the retrieved context to answer the question.
+
+ACT: Retrieval-Augmented Generation (RAG) is a system that combines semantic search with generative AI to create dynamic responses. It involves two main steps:
+1.  **Retrieval:** The system searches a database or collection of documents for information relevant to a user's query.
+2.  **Generation:** A language model then uses the retrieved information to generate a coherent and informative response.
+
+Semantic search is a technique that retrieves information based on the meaning of the query rather than exact keywords. Generative AI, such as GPT-4, is used to create text or content based on input prompts.
+
+📊 Evaluation:
+{
+    "bleu": 0.0026,
+    "rouge1_f": 0.1918,
+    "rougeL_f": 0.1233,
+    "mse_length": 11236.0,
+    "mae_length": 106.0,
+    "rmse_length": 106.0
+}

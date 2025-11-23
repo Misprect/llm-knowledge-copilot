@@ -1,0 +1,27 @@
+🧠 Question:
+If every model in a system improves accuracy by 10%, and you stack 3 models, does accuracy increase by 30%? Explain.
+
+🎯 Strategy: react
+
+💬 Final Answer:
+No, accuracy does not increase by 30%.
+
+Here's why:
+
+When you "stack" models, the improvements are typically applied sequentially or in a way that compounds. A 10% improvement means the new accuracy is 110% of the previous accuracy. This is a multiplicative effect, not an additive one.
+
+Let's illustrate with an example:
+
+Assume an initial accuracy of 50%.
+
+1.  **After the first model:** The accuracy improves by 10%.
+    *   New accuracy = 50% \* (1 + 0.10) = 50% \* 1.10 = 55%
+
+2.  **After the second model:** The accuracy improves by another 10% *from the current 55%*.
+    *   New accuracy = 55% \* (1 + 0.10) = 55% \* 1.10 = 60.5%
+
+3.  **After the third model:** The accuracy improves by another 10% *from the current 60.5%*.
+    *   New accuracy = 60.5% \* (1 + 0.10) = 60.5% \* 1.10 = 66.55%
+
+So, stacking three models, each providing a 10% relative accuracy improvement, results in an overall accuracy of 66.55%, not 80% (which would be 50% + 30%). The gains diminish with each subsequent model because the 10% is applied to an increasingly larger base accuracy.
+

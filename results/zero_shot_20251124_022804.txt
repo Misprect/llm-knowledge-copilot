@@ -1,0 +1,8 @@
+🧠 Question:
+Why does giving the model a specific output format reduce hallucinations?
+
+🎯 Strategy: zero_shot
+
+💬 Final Answer:
+Giving the model a specific output format reduces hallucinations by acting as a constraint, guiding the LLM and limiting free-form generation, which minimizes ambiguity and the need to invent information.
+

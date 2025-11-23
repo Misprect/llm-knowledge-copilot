@@ -1,0 +1,33 @@
+🧠 Question:
+Why do LLMs sometimes hallucinate?
+
+🎯 Strategy: tot
+
+💬 Final Answer:
+The chosen path is: **LLMs hallucinate due to limitations in their training data and the probabilistic nature of their generation process.**
+
+Here's why LLMs sometimes hallucinate, based on this path:
+
+LLMs are trained on massive datasets of text and code. While these datasets are vast, they are not perfect. They can contain:
+
+*   **Inaccuracies or Biases:** The data itself might have factual errors, outdated information, or reflect societal biases. The LLM learns these imperfections and can reproduce them.
+*   **Incomplete Information:** For certain queries, the training data might not have sufficient or specific enough information to provide a definitive answer.
+*   **Conflicting Information:** Different sources within the training data might present contradictory facts, leading the LLM to struggle with which to prioritize or to synthesize them in a way that creates a false statement.
+
+Furthermore, the way LLMs generate text is inherently probabilistic. They don't "understand" information in the human sense. Instead, they predict the next most likely word or sequence of words based on the patterns they've learned from their training data. This can lead to hallucinations because:
+
+*   **Over-reliance on Patterns:** The LLM might identify a plausible-sounding pattern in its training data and apply it even when it doesn't correspond to factual reality. It prioritizes linguistic coherence over factual accuracy.
+*   **"Making Things Up" to Fill Gaps:** When faced with a prompt for which it lacks sufficient grounding in its training data, the LLM might generate text that *sounds* correct and fits the expected structure, even if it's factually incorrect, simply to complete the response.
+*   **Confabulation:** Similar to how humans might fill in memory gaps, LLMs can "confabulate" by generating plausible but fabricated details to create a coherent narrative.
+
+In essence, LLMs hallucinate when their learned patterns and probabilistic generation process lead them to produce outputs that are fluent and seem plausible, but are not grounded in factual reality due to limitations or gaps in their training data.
+
+📊 Evaluation:
+{
+    "bleu": 0.002,
+    "rouge1_f": 0.0712,
+    "rougeL_f": 0.0534,
+    "mse_length": 93636.0,
+    "mae_length": 306.0,
+    "rmse_length": 306.0
+}

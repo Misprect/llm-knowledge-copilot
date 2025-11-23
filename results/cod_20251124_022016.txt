@@ -1,0 +1,22 @@
+🧠 Question:
+Summarize what a transformer encoder does
+
+🎯 Strategy: cod
+
+💬 Final Answer:
+1.  Encodes input tokens into contextualized representations.
+2.  Uses self-attention to weigh word importance.
+3.  Generates query, key, and value vectors.
+4.  Captures relationships between input elements.
+
+**Summary:** Encodes input, weighs words via self-attention, generating contextualized representations.
+
+📊 Evaluation:
+{
+    "bleu": 0.0282,
+    "rouge1_f": 0.2857,
+    "rougeL_f": 0.2857,
+    "mse_length": 484.0,
+    "mae_length": 22.0,
+    "rmse_length": 22.0
+}
