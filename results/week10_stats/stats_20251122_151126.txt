@@ -1,0 +1,209 @@
+📊 WEEK 10 LLM STATS REPORT
+
+Question: What is memoization in React?
+
+Answer: Memoization in React is an optimization technique that **caches the result of a computation and returns the cached result when the same inputs occur again.** In the context of React, this primarily applies to components and functions, preventing unnecessary re-renders and re-calculations.
+
+Think of it like this: Imagine you have a complex function that takes a lot of time to compute something. If you call this function multiple times with the *exact same arguments*, it's wasteful to re-run the entire computation every single time. Memoization remembers the answer from the first time and just gives you that answer back instantly for subsequent identical calls.
+
+In React, memoization is used to:
+
+1.  **Prevent unnecessary re-renders of components:** This is the most common use case. When a component re-renders, React compares the new props and state with the previous ones. If they haven't changed, React can skip re-rendering the component and its children.
+2.  **Optimize expensive calculations within components:** If you have a function inside your component that performs a computationally intensive task, you can memoize its result so it only runs when its dependencies change.
+
+### How is Memoization Implemented in React?
+
+React provides several built-in hooks and utilities for memoization:
+
+#### 1. `React.memo()` (for Functional Components)
+
+`React.memo()` is a **higher-order component (HOC)** that wraps your functional component. It performs a **shallow comparison** of the component's props. If the props haven't changed since the last render, React skips re-rendering the component and reuses the last rendered result.
+
+**How it works:**
+
+*   `React.memo()` takes your component as an argument.
+*   It returns a new, "memoized" version of your component.
+*   When this memoized component receives new props, `React.memo()` compares them to the previous props using a shallow comparison (it checks if the references to objects and primitives are the same).
+*   If all props are strictly equal (`===`), the component is **not re-rendered**.
+*   If any prop has changed, the component will re-render as usual.
+
+**Example:**
+
+```javascript
+import React from 'react';
+
+// A component that might re-render unnecessarily
+function MyExpensiveComponent({ data }) {
+  console.log('Rendering MyExpensiveComponent');
+  // Imagine some complex calculation here based on 'data'
+  return <div>{data.value}</div>;
+}
+
+// Wrap it with React.memo
+const MemoizedExpensiveComponent = React.memo(MyExpensiveComponent);
+
+function App() {
+  const [count, setCount] = React.useState(0);
+  const [user, setUser] = React.useState({ name: 'Alice' });
+
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+
+      {/*
+        Even though 'user' object reference might change if we re-create it,
+        if we only update state and 'user' remains the same object,
+        MemoizedExpensiveComponent will not re-render.
+      */}
+      <MemoizedExpensiveComponent data={user} />
+
+      {/*
+        If we don't use React.memo, MyExpensiveComponent would re-render
+        every time 'count' changes, even though its 'data' prop hasn't changed.
+      */}
+      {/* <MyExpensiveComponent data={user} /> */}
+    </div>
+  );
+}
+
+export default App;
+```
+
+**When to use `React.memo()`:**
+
+*   When you have a component that renders often with the same props.
+*   When the component is computationally expensive to render.
+*   When the component's props are primitives or stable object references.
+
+**Custom comparison:** `React.memo()` also accepts an optional second argument, a custom comparison function, if you need to do more than a shallow comparison.
+
+```javascript
+const areEqual = (prevProps, nextProps) => {
+  // Custom comparison logic
+  return prevProps.user.id === nextProps.user.id;
+};
+
+const MemoizedComponentWithCustomCompare = React.memo(MyComponent, areEqual);
+```
+
+#### 2. `useMemo()` (for Memoizing Values)
+
+`useMemo()` is a hook that **memoizes the result of a calculation**. It takes a function and an array of dependencies. The function will only be re-executed if one of the dependencies has changed. Otherwise, `useMemo()` returns the cached result.
+
+**How it works:**
+
+*   `useMemo(() => computeExpensiveValue(a, b), [a, b])`
+*   The first argument is a function that performs the computation and returns a value.
+*   The second argument is an array of dependencies.
+*   `useMemo()` will only recompute the memoized value when one of the dependencies in the array has changed.
+
+**Example:**
+
+```javascript
+import React, { useState, useMemo } from 'react';
+
+function calculateFactorial(n) {
+  console.log('Calculating factorial...');
+  if (n <= 1) return 1;
+  return n * calculateFactorial(n - 1);
+}
+
+function App() {
+  const [number, setNumber] = useState(5);
+  const [otherState, setOtherState] = useState(0);
+
+  // Memoize the factorial calculation
+  const factorial = useMemo(() => calculateFactorial(number), [number]);
+
+  return (
+    <div>
+      <h1>Factorial of {number} is: {factorial}</h1>
+      <button onClick={() => setNumber(number + 1)}>Increment Number</button>
+      <button onClick={() => setOtherState(otherState + 1)}>
+        Update Other State ({otherState})
+      </button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+In this example, `calculateFactorial` will only run when `number` changes. Clicking "Update Other State" will trigger a re-render of `App`, but `useMemo` will return the cached `factorial` value without re-executing `calculateFactorial`.
+
+**When to use `useMemo()`:**
+
+*   When you have a computationally expensive calculation within a component that you want to avoid re-running on every render.
+*   When you want to pass a stable object or array reference to a child component that is wrapped in `React.memo()` to prevent it from re-rendering unnecessarily.
+
+#### 3. `useCallback()` (for Memoizing Functions)
+
+`useCallback()` is similar to `useMemo()`, but it **memoizes a function itself**, rather than the result of a function. It returns a memoized version of the callback function. This is particularly useful when passing callbacks to optimized child components that rely on referential equality to prevent re-renders.
+
+**How it works:**
+
+*   `useCallback(callbackFunction, [dependencies])`
+*   The first argument is the function you want to memoize.
+*   The second argument is an array of dependencies.
+*   `useCallback()` will return the same function instance as long as the dependencies haven't changed.
+
+**Example:**
+
+```javascript
+import React, { useState, useCallback } from 'react';
+
+function ChildButton({ onClick, children }) {
+  console.log(`Rendering ChildButton: ${children}`);
+  return <button onClick={onClick}>{children}</button>;
+}
+
+const MemoizedChildButton = React.memo(ChildButton);
+
+function App() {
+  const [count, setCount] = useState(0);
+  const [other, setOther] = useState(0);
+
+  // Without useCallback, this handleClick function would be re-created
+  // on every render of App, causing MemoizedChildButton to re-render.
+  const handleClick = useCallback(() => {
+    setCount(count + 1);
+  }, [count]); // Dependency on 'count'
+
+  // This function will be re-created on every render of App
+  const handleOtherClick = () => {
+    setOther(other + 1);
+  };
+
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <MemoizedChildButton onClick={handleClick}>Increment Count</MemoizedChildButton>
+      <button onClick={() => setOther(other + 1)}>Increment Other ({other})</button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+In this example, `handleClick` is memoized using `useCallback`. When "Increment Other" is clicked, `App` re-renders, but `handleClick` remains the same function reference because `count` (its dependency) hasn't changed. Since `MemoizedChildButton` receives the same `onClick` prop reference, it doesn't re-render. If `useCallback` were not used, `handleClick` would be a new function on each render, breaking the memoization of `MemoizedChildButton`.
+
+**When to use `useCallback()`:**
+
+*   When passing callbacks to optimized child components (e.g., those wrapped in `React.memo`).
+*   When a function is a dependency of another hook like `useEffect` or `useMemo` and you want to ensure referential stability.
+
+### Key Takeaways about Memoization in React:
+
+*   **It's an optimization:** Don't over-optimize. Use memoization when you identify performance bottlenecks or unnecessary re-renders.
+*   **Referential Equality:** Memoization techniques like `React.memo()`, `useMemo()`, and `useCallback()` heavily rely on referential equality (`===`). Be mindful of how you create objects and arrays to ensure they have stable references when they shouldn't trigger re-renders.
+*   **Dependencies are crucial:** For `useMemo` and `useCallback`, accurately specifying the dependencies is vital. Missing dependencies can lead to stale data, and unnecessary dependencies can negate the benefits of memoization.
+*   **Shallow Comparison (for `React.memo`):** Remember that `React.memo` performs a shallow comparison by default. If your props are deeply nested objects, you might need a custom comparison function or use `useMemo` to ensure stable references for those nested structures.
+
+By understanding and applying these memoization techniques, you can significantly improve the performance and efficiency of your React applications.
+
+⏱ Latency: 8.6854 sec
+🔢 Token Count: 1258
+🔍 Similarity Score: 0.8163
+✅ Passed: True

@@ -1,0 +1,13 @@
+Question: What cuases tears from eyes?
+
+--- TOP 2 ANSWERS ---
+0.672 -> Certain medical conditions affecting the eyes, such as allergies, infections (conjunctivitis), or dry eye syndrome (leading to compensatory tearing), can cause excessive tear production.
+
+0.640 -> Tears can be caused by a strong emotional response like sadness, happiness, or anger, which triggers the lacrimal glands to produce more tears.
+
+--- ALL SCORES ---
+0.672 -> Certain medical conditions affecting the eyes, such as allergies, infections (conjunctivitis), or dry eye syndrome (leading to compensatory tearing), can cause excessive tear production.
+0.640 -> Tears can be caused by a strong emotional response like sadness, happiness, or anger, which triggers the lacrimal glands to produce more tears.
+0.616 -> Physical pain or injury to the eye or surrounding area can lead to reflex tearing as a protective mechanism.
+0.571 -> Involuntary muscle spasms or neurological signals can also trigger tear production even without apparent external stimuli or emotional states.
+0.555 -> Irritation from foreign objects in the eye (dust, smoke, an eyelash) or environmental factors (wind, cold air) stimulates the lacrimal glands to wash away the irritant.

@@ -1,0 +1,17 @@
+🧠 Question:
+What is the purpose of ROM in a computer?
+
+🎯 Strategy: zero_shot
+
+💬 Final Answer:
+The provided context does not contain information about the purpose of ROM in a computer.
+
+📊 Evaluation:
+{
+    "bleu": 0.0132,
+    "rouge1_f": 0.0714,
+    "rougeL_f": 0.0714,
+    "mse_length": 4.0,
+    "mae_length": 2.0,
+    "rmse_length": 2.0
+}

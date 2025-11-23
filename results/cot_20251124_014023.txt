@@ -1,0 +1,42 @@
+🧠 Question:
+Explain the difference between supervised and unsupervised learning.?
+
+🎯 Strategy: cot
+
+💬 Final Answer:
+The user is asking for an explanation of the difference between supervised and unsupervised learning. I need to define both terms and highlight their key distinctions.
+
+**Supervised Learning:**
+*   **Definition:** In supervised learning, the model is trained on a labeled dataset. This means each data point in the training set has a corresponding correct output or label.
+*   **Goal:** The goal is to learn a mapping function from input features to output labels so that the model can predict the label for new, unseen data.
+*   **Analogy:** Think of a teacher (the labels) guiding a student (the model) by providing correct answers for practice problems.
+*   **Training Task:** Classification (e.g., spam detection) or Regression (e.g., predicting house prices).
+
+**Unsupervised Learning:**
+*   **Definition:** In unsupervised learning, the model is trained on an unlabeled dataset. There are no predefined correct outputs.
+*   **Goal:** The goal is to find hidden patterns, structures, or relationships within the data itself.
+*   **Analogy:** Imagine a detective (the model) trying to find clues and connections in a crime scene (the data) without any prior information about who committed the crime.
+*   **Training Task:** Clustering (e.g., grouping customers by behavior) or Dimensionality Reduction (e.g., simplifying complex data).
+
+**Key Differences:**
+*   **Data:** Supervised learning uses labeled data; unsupervised learning uses unlabeled data.
+*   **Goal:** Supervised learning aims to predict a known outcome; unsupervised learning aims to discover unknown patterns.
+*   **Guidance:** Supervised learning is guided by correct answers; unsupervised learning explores the data independently.
+
+Now, I will synthesize this into a concise answer.
+
+**Final Answer:**
+
+Supervised learning involves training a model on a **labeled dataset**, where each data point has a corresponding correct output. The goal is to learn a mapping to predict these outputs for new data, much like a student learning with a teacher providing answers. Examples include classification and regression.
+
+Unsupervised learning, on the other hand, trains a model on an **unlabeled dataset**. The objective is to discover hidden patterns, structures, or relationships within the data itself, without any predefined correct answers. This is akin to a detective finding clues in raw evidence. Examples include clustering and dimensionality reduction.
+
+📊 Evaluation:
+{
+    "bleu": 0.0167,
+    "rouge1_f": 0.1789,
+    "rougeL_f": 0.1211,
+    "mse_length": 101761.0,
+    "mae_length": 319.0,
+    "rmse_length": 319.0
+}

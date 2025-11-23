@@ -1,0 +1,45 @@
+📊 WEEK 10 LLM STATS REPORT
+
+Question: Why do leaves turn yellow during autumn?
+
+Answer: Leaves turn yellow in the autumn due to a fascinating process called **senescence**, which is essentially the controlled aging and breakdown of plant tissues. Here's a breakdown of why it happens:
+
+**1. The Role of Chlorophyll:**
+
+* **During the growing season (spring and summer),** leaves are packed with **chlorophyll**, a green pigment. Chlorophyll's primary job is to capture sunlight for **photosynthesis**, the process by which plants convert light energy into chemical energy (sugars). This is why most leaves are green for most of the year.
+
+**2. Changing Light and Temperature:**
+
+* As autumn approaches, the **days get shorter** and the **temperatures get cooler**. These are the primary environmental cues that signal to the tree that it's time to prepare for winter.
+
+**3. Chlorophyll Breakdown:**
+
+* In response to these cues, trees begin to **shut down** the parts of the plant that are not essential for survival during the cold, dark months. This includes the leaves, which are expensive to maintain and would likely be damaged by frost and snow.
+* The tree starts to **break down the chlorophyll** in the leaves. This process essentially recycles the valuable nutrients within the chlorophyll molecules. As the green chlorophyll disappears, the other pigments that were always present in the leaf, but masked by the green, begin to show through.
+
+**4. The Emergence of Other Pigments:**
+
+* **Carotenoids:** These are pigments that are responsible for **yellow and orange** colors. They are also involved in photosynthesis, helping to capture light energy and protect chlorophyll from damage. Think of the colors in carrots and corn – those are carotenoids. In autumn, as chlorophyll degrades, the carotenoids become visible, making the leaves appear yellow or orange.
+
+**5. The Role of Anthocyanins (for Red and Purple Colors):**
+
+* While carotenoids are responsible for yellow and orange, **anthocyanins** are responsible for the vibrant **red and purple** colors seen in some autumn leaves. These pigments are not always present in the leaves; they are often produced in the autumn in response to sunlight and cool temperatures. They may act as a protective mechanism against light damage during the chlorophyll breakdown process or even deter insects. The production of anthocyanins is a more complex process and depends on the specific tree species and environmental conditions.
+
+**6. The Formation of the Abscission Layer:**
+
+* At the base of each leaf stem (petiole), the tree forms a specialized layer of cells called the **abscission layer**. This layer gradually weakens the connection between the leaf and the branch.
+* As this layer develops, it also **severs the flow of water and nutrients** to the leaf. This further aids in the breakdown of chlorophyll and the eventual detachment of the leaf.
+
+**In summary, leaves turn yellow because:**
+
+* **Environmental cues (shorter days, cooler temperatures) signal the tree to prepare for winter.**
+* **Chlorophyll, the green pigment, is broken down and recycled.**
+* **Other pigments, like carotenoids (yellow and orange), which were already present but masked, become visible.**
+* **The formation of the abscission layer cuts off resources, facilitating leaf drop.**
+
+This beautiful display of color is a natural and essential part of a tree's life cycle, allowing it to conserve energy and resources to survive the winter and flourish again in the spring.
+
+⏱ Latency: 5.1119 sec
+🔢 Token Count: 538
+🔍 Similarity Score: 0.7717
+✅ Passed: True

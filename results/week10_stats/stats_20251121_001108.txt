@@ -1,0 +1,87 @@
+📊 WEEK 10 LLM STATS REPORT
+
+Question: What is memoization in dynamic programming?
+
+Answer: In dynamic programming, **memoization** is an optimization technique where you store the results of expensive function calls and return the cached result when the same inputs occur again. It's essentially a way to avoid redundant computations by remembering what you've already calculated.
+
+Think of it like this: Imagine you're solving a complex math problem. If you encounter a sub-problem that you've already solved earlier in the process, you wouldn't want to re-solve it from scratch, would you? You'd just look up your previous answer. Memoization does exactly that for algorithms.
+
+**Here's a breakdown of how it works in the context of dynamic programming:**
+
+1. **Identifying Overlapping Subproblems:** Dynamic programming problems inherently have the property of **overlapping subproblems**. This means that the solution to a larger problem can be broken down into smaller sub-problems, and these smaller sub-problems are often encountered multiple times during the computation.
+
+2. **Storing Results:** When you solve a sub-problem for the first time, you store its result in a data structure. This data structure is often an array, a hash map, or a dictionary, where the input to the sub-problem serves as the key, and the computed result is the value.
+
+3. **Checking the Cache:** Before computing the solution to a sub-problem, you first check if its result is already present in the cache.
+
+4. **Returning Cached Result (if found):** If the result is found in the cache, you simply return it directly, skipping the computation.
+
+5. **Computing and Storing (if not found):** If the result is not found in the cache, you compute it as usual, and *then* store it in the cache before returning it.
+
+**Key Benefits of Memoization in Dynamic Programming:**
+
+* **Reduces Time Complexity:** By avoiding repeated computations, memoization can significantly reduce the time complexity of an algorithm. Instead of an exponential time complexity (like in naive recursive solutions), you often achieve polynomial time complexity.
+* **Simplifies Implementation (often):** Memoization can make recursive solutions more efficient. You can often start with a straightforward recursive formulation and then add memoization to optimize it.
+* **Improves Performance:** For problems with many overlapping subproblems, the performance gains from memoization can be substantial.
+
+**Illustrative Example: Fibonacci Sequence**
+
+The classic example is the Fibonacci sequence. The recursive definition is:
+* `F(0) = 0`
+* `F(1) = 1`
+* `F(n) = F(n-1) + F(n-2)` for `n > 1`
+
+A naive recursive implementation would look like this:
+
+```python
+def fibonacci_naive(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci_naive(n-1) + fibonacci_naive(n-2)
+```
+
+This approach recalculates `fibonacci_naive(k)` many times for the same `k`. For example, to calculate `fibonacci_naive(5)`, you'd calculate `fibonacci_naive(3)` twice, `fibonacci_naive(2)` three times, and so on.
+
+Now, let's apply memoization:
+
+```python
+def fibonacci_memoized(n, memo={}):
+    if n in memo:  # Check if the result is already in the cache
+        return memo[n]
+    if n <= 1:
+        result = n
+    else:
+        result = fibonacci_memoized(n-1, memo) + fibonacci_memoized(n-2, memo)
+    memo[n] = result  # Store the computed result in the cache
+    return result
+```
+
+In this memoized version:
+
+* `memo` is a dictionary that acts as our cache.
+* Before computing `fibonacci_memoized(n)`, we check if `n` is already a key in `memo`.
+* If it is, we return the stored value.
+* If not, we compute it, store it in `memo`, and then return it.
+
+This memoized version will only compute each Fibonacci number once, drastically improving its efficiency.
+
+**Memoization vs. Tabulation (Another DP Approach):**
+
+Memoization is often called **"top-down" dynamic programming** because it starts with the main problem and recursively breaks it down into sub-problems, memoizing results as it goes.
+
+The other primary approach in dynamic programming is **tabulation**, which is also known as **"bottom-up" dynamic programming**. Tabulation involves building up the solution from the smallest sub-problems to the larger ones, typically using iterative loops and filling a table (an array or matrix) in a specific order.
+
+While both memoization and tabulation achieve the same goal of optimizing dynamic programming problems by avoiding redundant computations, they differ in their implementation style:
+
+* **Memoization:** Recursive, top-down, natural for problems with complex dependencies.
+* **Tabulation:** Iterative, bottom-up, often more straightforward for problems with clear sequential dependencies.
+
+In many cases, you can choose either approach. However, for certain problems, one might be slightly more intuitive or efficient to implement.
+
+**In summary, memoization is a powerful technique in dynamic programming that leverages caching to store and retrieve the results of previously computed sub-problems, leading to significant performance improvements by eliminating redundant calculations.**
+
+⏱ Latency: 6.2623 sec
+🔢 Token Count: 736
+🔍 Similarity Score: 0.8356
+✅ Passed: True

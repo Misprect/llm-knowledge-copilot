@@ -1,0 +1,17 @@
+🧠 Question:
+What is the purpose of RAM in a computer?
+
+🎯 Strategy: zero_shot
+
+💬 Final Answer:
+RAM is used to get word embeddings.
+
+📊 Evaluation:
+{
+    "bleu": 0.014,
+    "rouge1_f": 0.1,
+    "rougeL_f": 0.1,
+    "mse_length": 36.0,
+    "mae_length": 6.0,
+    "rmse_length": 6.0
+}

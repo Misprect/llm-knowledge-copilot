@@ -1,0 +1,17 @@
+🧠 Question:
+Define photosynthesis in simple words.
+
+🎯 Strategy: few_shot
+
+💬 Final Answer:
+Plants use sunlight, water, and air to make their own food.
+
+📊 Evaluation:
+{
+    "bleu": 0.0915,
+    "rouge1_f": 0.6087,
+    "rougeL_f": 0.4348,
+    "mse_length": 1.0,
+    "mae_length": 1.0,
+    "rmse_length": 1.0
+}

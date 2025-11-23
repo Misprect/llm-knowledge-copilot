@@ -1,0 +1,13 @@
+Question: Why do we sleep?
+
+--- TOP 2 ANSWERS ---
+0.672 -> Sleep conserves energy by reducing metabolic rate, allowing for rest and repair.
+
+0.589 -> Sleep clears metabolic waste products from the brain, preventing the buildup of toxins that could impair cognitive function.
+
+--- ALL SCORES ---
+0.672 -> Sleep conserves energy by reducing metabolic rate, allowing for rest and repair.
+0.589 -> Sleep clears metabolic waste products from the brain, preventing the buildup of toxins that could impair cognitive function.
+0.556 -> Sleep is crucial for immune system function, allowing the body to produce and release cytokines essential for fighting infection and inflammation.
+0.537 -> Sleep plays a role in emotional regulation, processing experiences and re-balancing neurotransmitters to maintain mood stability and mental well-being.
+0.514 -> Sleep consolidates memories, transferring information from short-term to long-term storage for learning and recall.

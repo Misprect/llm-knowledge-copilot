@@ -1,0 +1,17 @@
+🧠 Question:
+Explain batch normalization.
+
+🎯 Strategy: few_shot
+
+💬 Final Answer:
+Batch normalization normalizes layer inputs to stabilize training and improve performance.
+
+📊 Evaluation:
+{
+    "bleu": 0.4035,
+    "rouge1_f": 0.6364,
+    "rougeL_f": 0.6364,
+    "mse_length": 0.0,
+    "mae_length": 0.0,
+    "rmse_length": 0.0
+}

@@ -1,0 +1,35 @@
+{
+    "question": "Why do we sleep?",
+    "top2": [
+        {
+            "score": 0.6724880933761597,
+            "text": "Sleep conserves energy by reducing metabolic rate, allowing for rest and repair."
+        },
+        {
+            "score": 0.5890201330184937,
+            "text": "Sleep clears metabolic waste products from the brain, preventing the buildup of toxins that could impair cognitive function."
+        }
+    ],
+    "all_candidates": [
+        {
+            "score": 0.6724880933761597,
+            "text": "Sleep conserves energy by reducing metabolic rate, allowing for rest and repair."
+        },
+        {
+            "score": 0.5890201330184937,
+            "text": "Sleep clears metabolic waste products from the brain, preventing the buildup of toxins that could impair cognitive function."
+        },
+        {
+            "score": 0.5558003783226013,
+            "text": "Sleep is crucial for immune system function, allowing the body to produce and release cytokines essential for fighting infection and inflammation."
+        },
+        {
+            "score": 0.5367064476013184,
+            "text": "Sleep plays a role in emotional regulation, processing experiences and re-balancing neurotransmitters to maintain mood stability and mental well-being."
+        },
+        {
+            "score": 0.5138207674026489,
+            "text": "Sleep consolidates memories, transferring information from short-term to long-term storage for learning and recall."
+        }
+    ]
+}

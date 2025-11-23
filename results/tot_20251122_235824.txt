@@ -1,0 +1,33 @@
+🧠 Question:
+Explain the difference between supervised and unsupervised learning.
+
+🎯 Strategy: tot
+
+💬 Final Answer:
+Here's an explanation of the difference between supervised and unsupervised learning, drawing on the core concepts of each:
+
+The fundamental difference between supervised and unsupervised learning lies in the **presence or absence of labeled data** during the training process.
+
+*   **Supervised Learning:** In supervised learning, the algorithm is trained on a dataset that includes **both input features and their corresponding correct output labels**. Think of it like a teacher providing examples with the answers. The goal is for the algorithm to learn a mapping function from the input to the output, so that it can accurately predict the output for new, unseen input data.
+
+    *   **Analogy:** Learning to identify different fruits by being shown pictures of apples labeled "apple," bananas labeled "banana," and so on.
+    *   **Key Characteristic:** Requires labeled training data.
+    *   **Common Tasks:** Classification (e.g., spam detection, image recognition) and Regression (e.g., predicting house prices, stock market forecasting).
+
+*   **Unsupervised Learning:** In unsupervised learning, the algorithm is trained on a dataset that **only contains input features, without any predefined output labels**. The algorithm is left to discover patterns, structures, and relationships within the data on its own. It's like exploring a new dataset without any prior knowledge of what to look for.
+
+    *   **Analogy:** Grouping a collection of different fruits together based on their similarities in color, shape, and size, without being told what each fruit is called.
+    *   **Key Characteristic:** Does not require labeled training data.
+    *   **Common Tasks:** Clustering (e.g., customer segmentation, anomaly detection) and Dimensionality Reduction (e.g., feature extraction, noise reduction).
+
+In essence, supervised learning is about **prediction** based on known examples, while unsupervised learning is about **discovery** of inherent patterns and structures within the data.
+
+📊 Evaluation:
+{
+    "bleu": 0.004,
+    "rouge1_f": 0.0685,
+    "rougeL_f": 0.0616,
+    "mse_length": 71824.0,
+    "mae_length": 268.0,
+    "rmse_length": 268.0
+}

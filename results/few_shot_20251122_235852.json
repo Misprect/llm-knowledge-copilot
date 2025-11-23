@@ -1,0 +1,25 @@
+{
+    "answer": "Plants use sunlight, water, and air to make their own food.",
+    "strategy": "few_shot",
+    "retrieved": [
+        {
+            "id": "chunk_022",
+            "topic": "• In the context of reinforcement learning from",
+            "educational": "• In the context of reinforcement learning from feedback, FLAN -T5 generates outputs which are then evaluated • and fine -tuned based on a reward system to align more closely with human preferences. RL FROM MORE \"NEUTRAL\" SUMMARIZATIONS DAY 7 Code for Aligning FLAN -T5 with RHLF New Section 1 Page 38 LOADING OUR REFERENCE FLAN -T5 MODEL New Section 1 Page 39 Section 10 BERT for multilabel classification Part 1 & 2 Part 1 Dataset Object: Refers to the collection of data used for machine learning, which can be labeled or unlabeled.• Data Collator: A tool for processing and preparing data from the dataset for the model, converting raw data into a format exp ected by the model. • Training Arguments: A configuration object that holds parameters and hyperparameters for the training process, such as learni ng rate, batch size, and epochs. The component that performs the actual fine -tuning loop, making the training process more efficient. • Optimization techniques mentioned include: Adjusting padding tokens for each batch to ensure efficient memory usage. ▪ It is a method to adjust the batches of vector to same length so as the tokenization and learning done by mode is smooth and with no hindrance ▪○ Model Freezing: ○ Freezing portions of the model to speed up training while potentially sacrificing some performance. • DIAGRAM REPRESENTATION FOR PART 1 FOUR MAIN COMPONENENTS COMPARING OPEN SOURCE MODEL FOR TRAININH HYPERPARAMETERS New Section 1 Page 40 DAY 8 CODE FOR BERT MULTILABEL CLASSIFICATION Section 10 Writing LaTeX with GPT 2 LaTeX It is a formatting language used to typeset complex mathematical formulas, equations, and expressions. • It is commonly used in academic and scientific documents to ensure precise and consistent presentation of mathematical conten t. • New Section 1 Page 41 If trained like normal gpt2 using latex Case study: Sinan’s attempt at wise yet engaging responses —SAWYER\": Instructional Alignment: The video discusses the process of aligning a non -conversational Llama 3 model to create SAWYER, a conversational AI, using three steps: supervised fine -tuning, creating a reward model, and reinforcement learning. ○• Parameter Efficient Fine Tuning (PEFT): The technique of using LoRA (Low -Rank Adaptation) to fine -tune only specific parts of the model, making the process more memory and time efficient. Training a RoBERTa model to evaluate responses based on human preferences and using this feedback to improve the conversation al AI through reinforcement learning. • SAWYER_APPROACH New Section 1 Page 42 COMPARISON BETWEEN PPOP AND DPO PPO (Proximal Policy Optimization) Uses a reward mechanism to provide feedback on responses.• Does not require labelled data for preferred and non -preferred responses.",
+            "enterprise": "• In the context of reinforcement learning from feedback, FLAN -T5 generates outputs which are then evaluated • and fine -tuned based on a reward system to align more closely with human preferences. RL FROM MORE \"NEUTRAL\" SUMMARIZATIONS DAY 7 Code for Aligning FLAN -T5 with RHLF New Section 1 Page 38 LOADING OUR REFERENCE FLAN -T5 MODEL New Section 1 Page 39 Section 10 BERT for multilabel classification Part 1 & 2 Part 1 Dataset Object: Refers to the collection of data used for machine learning, which can be labeled or unlabeled.• Data Collator: A tool for processing and preparing data from the dataset for the model, converting raw data into a format exp ected by the model. • Training Arguments: A configuration object that holds parameters and hyperparameters for the training process, such as learni ng rate, batch size, and epochs.",
+            "meta": {
+                "id": "chunk_022",
+                "topic": "• In the context of reinforcement learning from",
+                "source": "New Section 1.pdf"
+            }
+        }
+    ],
+    "evaluation": {
+        "bleu": 0.0915,
+        "rouge1_f": 0.6087,
+        "rougeL_f": 0.4348,
+        "mse_length": 1.0,
+        "mae_length": 1.0,
+        "rmse_length": 1.0
+    }
+}
